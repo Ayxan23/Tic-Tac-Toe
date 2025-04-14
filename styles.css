@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: rgb(8, 48, 59);
+  color: white;
+}
+
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 92%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  position: relative;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  user-select: none;
+  background-color: rgb(210, 210, 210);
+  border-radius: 20px;
+  outline: none;
+  overflow: hidden;
+}
+
+.box div {
+  background-color: black;
+  width: 24vh;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.box div:hover {
+  background-color: rgb(30, 30, 30);
+  transition: 0.2s;
+}
+
+.result {
+  position: absolute;
+  background-color: rgb(17, 17, 17);
+  height: 80vh;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  user-select: none;
+  display: none;
+}
+
+.result p,
+.result h2 {
+  font-weight: 500;
+  margin: 0;
+}
+.result p {
+  font-size: 64px;
+  color: rgb(0, 255, 238);
+}
+.result h2 {
+  font-weight: 600;
+  font-size: 44px;
+}
+
+.result button {
+  background-color: #00d269;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 28px;
+  padding: 8px 25px;
+  margin-top: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.result button:active {
+  background-color: #00d269de;
+}
+
+@media screen and (max-width: 650px) {
+  .box div {
+    width: 15vh;
+    font-size: 50px;
+  }
+  .result {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .box div {
+    width: 12vh;
+    font-size: 40px;
+  }
+}
