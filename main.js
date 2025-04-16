@@ -17,7 +17,7 @@ elements.forEach((element, i) =>
 
     if (checkWinner(i + 1) || counter == 9) {
       result.style.display = "flex";
-      counter != 9
+      counter != 9 || checkWinner(i + 1)
         ? (result.innerHTML = `<p>${icon}</p>
             <h2>WINNER!</h2>
             <button class="restart">Restart Game</button>`)
